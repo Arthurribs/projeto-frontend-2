@@ -1,9 +1,14 @@
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
 export default function App() {
   return (
-    <div className="container py-5">
-      <h1 className="titulo">The Beatles</h1>
-      <p className="destaque">Teste da fonte de destaque</p>
-      <button className="btn btn-dark">Botão Bootstrap</button>
-    </div>
+    <>
+      <Navbar />
+      <main className="container py-5" style={{ minHeight: '150vh' }}>
+        <h1 className="titulo">The Beatles</h1>
+      </main>
+      <Footer />
+    </>
   )
 }
