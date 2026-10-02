@@ -1,12 +1,19 @@
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Hero from './sections/Hero'
+import Banda from './sections/Banda'
+import Fotos from './sections/Fotos'
+import Timeline from './sections/Timeline'
 
 export default function App() {
   return (
     <>
       <Navbar />
-      <main className="container py-5" style={{ minHeight: '150vh' }}>
-        <h1 className="titulo">The Beatles</h1>
+      <main>
+        <Hero />
+        <Banda />
+        <Fotos />
+        <Timeline />
       </main>
       <Footer />
     </>
