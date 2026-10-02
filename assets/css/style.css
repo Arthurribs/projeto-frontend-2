@@ -1,0 +1,328 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--branco);
+  color: var(--preto);
+  font-family: var(--fonte-paragrafos);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: "BEBAS NEUE";
+  src: url(../fonts/BebasNeue-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url(../fonts/PlayfairDisplay-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter_18pt-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter_18pt-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+
+:root {
+  --branco: #ffffff;
+  --preto: #1a1a1a;
+  --cinza: #6e6e6e;
+  --vermelho: #c1121f;
+  --vermelho-bold: #a40f1a;
+  --fonte-titulos: "BEBAS NEUE", sans-serif;
+  --fonte-paragrafos: "Inter", sans-serif;
+  --fonte-destaque: "Playfair Display", serif;
+}
+
+.destaque {
+  font-family: var(--fonte-destaque);
+  font-size: 2rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.titulo {
+  font-family: var(--fonte-titulos);
+  font-size: 4rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.paragrafo {
+  font-family: var(--fonte-paragrafos);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.navbar-beatles {
+  background-color: var(--preto);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--vermelho);
+  --bs-btn-border-color: var(--vermelho-bold);
+  --bs-btn-hover-bg: var(--vermelho-bold);
+  --bs-btn-hover-border-color: var(--vermelho-bold);
+  --bs-btn-active-bg: var(--vermelho);
+  --bs-btn-active-border-color: var(--vermelho-bold);
+}
+
+section {
+  margin: 0.5rem 2rem;
+  padding: 0.5rem 2rem;
+}
+
+.footer-beatles {
+  background-color: var(--preto);
+  color: var(--branco);
+  margin-top: auto;
+  padding: 1.5rem;
+}
+
+.logo-footer {
+  height: 5rem;
+}
+
+.footer-beatles a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-beatles a {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-beatles p {
+  margin-bottom: 0;
+}
+
+.hero {
+  margin: 0;
+  padding: 0;
+}
+
+.card-home {
+  margin: 2rem;
+  padding: 2rem;
+  width: 60%;
+}
+
+.num-home {
+  font-family: var(--fonte-titulos);
+  font-size: 4rem;
+  line-height: 1.5;
+  font-weight: bold;
+  margin-bottom: -1.5rem;
+}
+
+.pa-home {
+  font-family: var(--fonte-paragrafos);
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.text-justificado {
+  text-align: justify;
+}
+
+/* ADICIONADO POR JADERSON ANDRADE
+Padroniza o tamanho da imagem em relação a tela e o texto rodear ela */
+.img-jornal {
+  float: left;
+  width: 50%;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+/* ADICIONADO POR JADERSON ANDRADE
+Justifica o texto para dar cara de jornal impresso, alinhado tanto na esquerda quanto na direita */
+.secao-jornal p {
+  text-align: justify;
+}
+
+/*ADICIONADO POR JADERSON ANDRADE
+Distância do Carrossel G. Harrison para o texto */
+.container-carrossel {
+  margin-top: 80px;
+}
+
+/*ADICIONADO POR JADERSON ANDRADE
+Faz as imagens do carrossel ficarem com tamanho padrão */
+#carrosselGeorge img {
+  height: 80%;
+  object-fit: cover;
+}
+
+/* ADICIONADO POR JADERSON ANDRADE
+Padroniza o tamanho da imagem em relação a tela e o texto rodear ela */
+.container-carrossel-dois {
+  float: left;
+  width: 50%;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+/*ADICIONADO POR JADERSON ANDRADE
+Faz as imagens do carrossel ficarem com tamanho padrão */
+#carrosselLegado .carousel-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+/*ADICIONADO POR JADERSON ANDRADE
+Espaçamento do texto para o video */
+.bt-legado {
+  margin-top: 80px;
+}
+
+.passada {
+  transition: transform 0.3s ease;
+}
+
+.passada:hover {
+  transform: translateY(-5px);
+}
+
+.hoverzada {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hoverzada:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.faixa-preta {
+  background-color: var(--preto);
+}
+
+.preto-e-branco {
+  filter: grayscale(100%);
+}
+
+/* Card de cada álbum: cresce e ganha sombra ao passar o mouse */
+.album-card {
+  position: relative;
+  height: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--branco);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 1rem 1.75rem rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+/* Capa do álbum: maior e sempre quadrada, cortando a imagem se precisar */
+.album-cover-wrap {
+  position: relative;
+}
+
+.album-cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Selo com o ano, sobre a capa */
+.album-ano {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background-color: var(--vermelho);
+  color: var(--branco);
+  font-weight: bold;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+}
+
+/* Aviso "ouça um trecho", escondido até passar o mouse */
+.album-audio-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--branco);
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.album-card:hover .album-audio-hint {
+  opacity: 1;
+}
+
+.album-card-body {
+  padding: 1rem;
+}
+
+.album-titulo {
+  color: var(--preto);
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.album-info {
+  color: var(--cinza);
+  font-size: 0.9rem;
+}
+
+  .galeria-fotos {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  .foto-galeria {
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .foto-galeria img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .titulo-galeria {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 10px;
+  }
+
+  .subtitulo-galeria {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666;
+  }
