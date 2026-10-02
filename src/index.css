@@ -1,0 +1,173 @@
+/* =========================================================
+   Estilos do site The Beatles
+   Base: assets/css/style.css do grupo (Parte 1).
+   Mantive as mesmas cores, fontes e classes do grupo.
+   Removi as classes de páginas que não foram migradas
+   (discografia, galeria, legado, george) e adicionei o que
+   a Landing Page precisa (rolagem suave e compensação do menu).
+   ========================================================= */
+
+/* ---------- Fontes (arquivos em public/fonts) ---------- */
+@font-face {
+  font-family: "BEBAS NEUE";
+  src: url("/fonts/bebasneue-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/fonts/playfairdisplay-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-18pt-regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-18pt-bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+/* ---------- Variáveis de cor e fonte (iguais às do grupo) ---------- */
+:root {
+  --branco: #ffffff;
+  --preto: #1a1a1a;
+  --cinza: #6e6e6e;
+  --cinza-claro: #f4f4f4; /* novo: fundo alternado das seções */
+  --vermelho: #c1121f;
+  --vermelho-bold: #a40f1a;
+  --fonte-titulos: "BEBAS NEUE", sans-serif;
+  --fonte-paragrafos: "Inter", sans-serif;
+  --fonte-destaque: "Playfair Display", serif;
+  --altura-menu: 90px; /* novo: altura do menu fixo */
+}
+
+/* ---------- Base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* novo: rolagem suave ao clicar no menu */
+}
+
+body {
+  background-color: var(--branco);
+  color: var(--preto);
+  font-family: var(--fonte-paragrafos);
+}
+
+/* novo: o menu fixo não cobre o título ao clicar numa âncora */
+section[id] {
+  scroll-margin-top: var(--altura-menu);
+}
+
+/* novo: fundo alternado para separar as seções */
+.fundo-claro {
+  background-color: var(--cinza-claro);
+}
+
+/* ---------- Tipografia do grupo ---------- */
+.titulo {
+  font-family: var(--fonte-titulos);
+  font-size: 4rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.destaque {
+  font-family: var(--fonte-destaque);
+  font-size: 2rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.paragrafo {
+  font-family: var(--fonte-paragrafos);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.text-justificado {
+  text-align: justify;
+}
+
+/* ---------- Menu e rodapé ---------- */
+.navbar-beatles {
+  background-color: var(--preto);
+}
+
+.footer-beatles {
+  background-color: var(--preto);
+  color: var(--branco);
+  padding: 1.5rem;
+}
+
+.footer-beatles p {
+  margin-bottom: 0;
+}
+
+.footer-beatles a {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-beatles a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.logo-footer {
+  height: 5rem;
+}
+
+/* ---------- Home ---------- */
+.faixa-preta {
+  background-color: var(--preto);
+}
+
+.num-home {
+  font-family: var(--fonte-titulos);
+  font-size: 4rem;
+  line-height: 1.5;
+  font-weight: bold;
+  margin-bottom: -1.5rem;
+}
+
+/* ---------- Botões ---------- */
+.btn-primary {
+  --bs-btn-bg: var(--vermelho);
+  --bs-btn-border-color: var(--vermelho-bold);
+  --bs-btn-hover-bg: var(--vermelho-bold);
+  --bs-btn-hover-border-color: var(--vermelho-bold);
+  --bs-btn-active-bg: var(--vermelho);
+  --bs-btn-active-border-color: var(--vermelho-bold);
+}
+
+/* ---------- Efeitos do grupo ---------- */
+.passada {
+  transition: transform 0.3s ease;
+}
+
+.passada:hover {
+  transform: translateY(-5px);
+}
+
+.hoverzada {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hoverzada:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.preto-e-branco {
+  filter: grayscale(100%);
+}
