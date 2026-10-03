@@ -125,9 +125,9 @@ export default function JohnLennon() {
                             key={index}
                             className={`carousel-item ${index === 0 ? 'active' : ''}`}
                         >
-                            <div className="row g-3">
+                            <div className="row g-3 py-3">
                                 {slide.map((foto) => (
-                                    <div className="col-4" key={foto.src}>
+                                    <div className="col-4 passada" key={foto.src}>
                                         <img
                                             src={foto.src}
                                             alt={foto.alt}
