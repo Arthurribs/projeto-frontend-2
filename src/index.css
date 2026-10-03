@@ -206,3 +206,8 @@ section[id] {
     margin-bottom: -1rem;
   }
 }
+/* Foto dos cards de integrantes (antes era style inline no HTML) */
+.img-integrante {
+  max-height: 180px;
+  object-fit: contain;
+}
