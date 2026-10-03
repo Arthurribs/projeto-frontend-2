@@ -7,4 +7,6 @@ export const links = [
   { texto: 'Linha do Tempo', href: '/#timeline' },
   { texto: 'Biografia', href: '/#biografia' },
   { texto: 'Integrantes', href: '/#integrantes' },
+  { texto: 'John Lennon', href: '/john-lennon', rota: true },
+
 ]

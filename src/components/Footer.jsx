@@ -1,4 +1,5 @@
 import { links } from '../data/links'
+import LinkMenu from './LinkMenu'
 
 export default function Footer() {
     return (
@@ -30,9 +31,7 @@ export default function Footer() {
                         <ul className="list-unstyled row row-cols-2 mb-0">
                             {links.map((link) => (
                                 <li className="col nav-item" key={link.href}>
-                                    <a className="nav-link" href={link.href}>
-                                        {link.texto}
-                                    </a>
+                                    <LinkMenu link={link} />
                                 </li>
                             ))}
                         </ul>

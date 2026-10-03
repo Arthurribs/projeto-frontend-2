@@ -1,7 +1,10 @@
+import { Link } from 'react-router-dom'
+
 const integrantes = [
     {
         nome: 'John Lennon',
         imagem: '/img/integrante-john.png',
+        rota: '/john-lennon',
         texto:
             'John Lennon foi um dos fundadores dos Beatles, atuando como vocalista, guitarrista e compositor. Ao lado de Paul McCartney, formou uma das parcerias de composição mais importantes da história da música.',
     },
@@ -53,6 +56,11 @@ export default function Integrantes() {
                                 <p className="text-justificado text-muted mb-0">
                                     {integrante.texto}
                                 </p>
+                                {integrante.rota && (
+                                    <Link to={integrante.rota} className="btn btn-dark mt-3">
+                                        Sobre John
+                                    </Link>
+                                )}
                             </div>
                         </div>
                     ))}

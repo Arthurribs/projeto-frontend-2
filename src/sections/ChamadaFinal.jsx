@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function ChamadaFinal() {
     return (
         <section id="legado" className="py-5">
@@ -25,9 +26,9 @@ export default function ChamadaFinal() {
                         </figure>
 
                         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                            <a href="/john-lennon" className="btn btn-primary btn-lg px-4 passada">
+                            <Link to="/john-lennon" className="btn btn-primary btn-lg px-4 passada">
                                 Conheça John Lennon →
-                            </a>
+                            </Link>
                             <a href="#inicio" className="btn btn-outline-dark btn-lg px-4">
                                 Voltar ao início ↑
                             </a>

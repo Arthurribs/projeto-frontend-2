@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { links } from '../data/links'
+import LinkMenu from './LinkMenu'
 
 export default function Navbar() {
   // Controla se o menu hambúrguer está aberto no celular
@@ -34,9 +35,7 @@ export default function Navbar() {
           <ul className="navbar-nav ms-auto">
             {links.map((link) => (
               <li className="nav-item" key={link.href}>
-                <a className="nav-link" href={link.href} onClick={fecharMenu}>
-                  {link.texto}
-                </a>
+                <LinkMenu link={link} onClick={fecharMenu} />
               </li>
             ))}
           </ul>
