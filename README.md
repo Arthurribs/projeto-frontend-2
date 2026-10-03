@@ -1,16 +1,88 @@
-# React + Vite
+# The Beatles | Landing Page em React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Parte 2 (individual) do trabalho da disciplina Desenvolvimento Frontend II.
+Universidade Veiga de Almeida | Prof. Caio Silva Azeredo | Turma 4169ADSN2A1
 
-Currently, two official plugins are available:
+## Autor
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Arthur Ribeiro dos Santos
 
-## React Compiler
+## Origem
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Repositorio do grupo (Parte 1): https://github.com/wnsogabriel/thebeatles-front2
+- Paginas que fiz na Parte 1: biografia.html e jonh-lennon.html
+- Autor do index.html original: Enzo Gabriel Pereira Silva
+- As paginas originais estao na pasta `referencia-html/` para comparacao
 
-## Expanding the ESLint configuration
+## Site publicado
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+https://beatles-react-arthur.netlify.app
+
+## Como executar
+
+```bash
+npm install
+npm run dev
+```
+
+## Tecnologias
+
+- React com Vite
+- Bootstrap 5 (mesmo framework de CSS usado pelo grupo)
+- React Router (rota separada para a pagina do John Lennon)
+
+## Secoes da Landing Page (rota /)
+
+| Secao                            | Origem                                                              |
+| -------------------------------- | ------------------------------------------------------------------- |
+| Navbar                           | Fusao dos menus do index.html e da biografia.html                   |
+| Hero                             | index.html (imagem + card "Conheca a Historia")                     |
+| A Banda em Numeros               | index.html                                                          |
+| Momentos Marcantes               | index.html                                                          |
+| Linha do Tempo                   | index.html                                                          |
+| Biografia                        | biografia.html (minha pagina)                                       |
+| Os Quatro de Liverpool           | biografia.html (cards) + index.html (card "Os Quatro de Liverpool") |
+| Um Legado Eterno (chamada final) | index.html (card "Legado" + citacao do John)                        |
+| Footer                           | Fusao dos rodapes do index.html e da biografia.html                 |
+
+## Rota extra (diferencial)
+
+| Rota         | Origem                          |
+| ------------ | ------------------------------- |
+| /john-lennon | jonh-lennon.html (minha pagina) |
+
+## Principais decisoes de fusao
+
+- Um unico menu e um unico rodape, compartilhados pela Landing e pela rota do John
+- Links do menu apontam para ancoras das secoes em vez de arquivos .html
+- Apenas um H1 na Landing (no Hero); o titulo "Biografia" virou H2
+- Botoes que levavam para paginas de colegas foram removidos
+- Imagens externas foram trocadas por imagens locais, renomeadas e comprimidas
+- Dados repetidos (numeros, fotos, timeline, integrantes, links) ficam em arrays percorridos com map()
+- useState no menu do celular e no botao "Ler mais" da biografia
+
+## Estrutura
+
+```
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   └── LinkMenu.jsx
+├── data/
+│   └── links.js
+├── sections/
+│   ├── Hero.jsx
+│   ├── Banda.jsx
+│   ├── Fotos.jsx
+│   ├── Timeline.jsx
+│   ├── Biografia.jsx
+│   ├── Integrantes.jsx
+│   └── ChamadaFinal.jsx
+├── pages/
+│   ├── LandingPage.jsx
+│   └── JohnLennon.jsx
+├── App.jsx
+├── index.css
+└── main.jsx
+```
