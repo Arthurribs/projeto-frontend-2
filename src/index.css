@@ -211,3 +211,8 @@ section[id] {
   max-height: 180px;
   object-fit: contain;
 }
+/* Fotos do carrossel do John com o mesmo tamanho */
+.foto-carrossel {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
